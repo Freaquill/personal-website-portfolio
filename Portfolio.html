@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fadly Ahmad Firdausy — B2B Presales · Product · IoT</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  :root {
+    /* Defaults, may be overridden by tweaks */
+    --accent: #3B82F6;
+    --accent-soft: rgba(59, 130, 246, 0.12);
+    --accent-line: rgba(59, 130, 246, 0.35);
+
+    --bg: #0A1322;
+    --bg-2: #0E1A2E;
+    --surface: #122036;
+    --surface-2: #182944;
+    --line: rgba(255,255,255,0.08);
+    --line-strong: rgba(255,255,255,0.14);
+
+    --ink: #F2F4F8;
+    --ink-2: #C6CCD8;
+    --ink-3: #8892A6;
+    --ink-4: #5E6A82;
+
+    --serif: 'Instrument Serif', 'Times New Roman', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --maxw: 1240px;
+    --gutter: clamp(20px, 4vw, 56px);
+    --section-y: clamp(72px, 9vw, 128px);
+    --radius: 14px;
+    --radius-lg: 20px;
+  }
+
+  [data-theme="light"] {
+    --bg: #F6F5F1;
+    --bg-2: #EFEDE6;
+    --surface: #FFFFFF;
+    --surface-2: #FBFAF6;
+    --line: rgba(10,19,34,0.08);
+    --line-strong: rgba(10,19,34,0.16);
+    --ink: #0A1322;
+    --ink-2: #2A3447;
+    --ink-3: #59647A;
+    --ink-4: #8892A6;
+    --accent-soft: color-mix(in oklab, var(--accent) 10%, transparent);
+    --accent-line: color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+
+  [data-density="compact"] {
+    --section-y: clamp(56px, 7vw, 96px);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { transition: none; transform: none; opacity: 1; }
+    * { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+  }
+
+  /* Grain texture (subtle) */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+  [data-theme="light"] body::before { display: none; }
+
+  /* Loading state while React mounts */
+  .boot {
+    position: fixed; inset: 0;
+    display: grid; place-items: center;
+    background: var(--bg);
+    color: var(--ink-3);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 999;
+    transition: opacity .4s ease;
+  }
+  .boot.hide { opacity: 0; pointer-events: none; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <div class="boot" id="boot">Loading portfolio…</div>
+
+  <script>
+    // EDITMODE state — tweakable defaults
+    window.__TWEAK_DEFAULTS__ = /*EDITMODE-BEGIN*/{
+      "accent": "#F0A03E",
+      "theme": "dark",
+      "density": "comfortable"
+    }/*EDITMODE-END*/;
+  </script>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="dist/portfolio.js"></script>
+</body>
+</html>
