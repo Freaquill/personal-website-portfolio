@@ -216,14 +216,14 @@ function Hero() {
           <Reveal delay={60}>
             <div className="hero__name-row hero__name-row--1">
               <span className="hero__num">01</span>
-              <span className="hero__name-sans">Fadly</span>
+              <span className="hero__name-italic">Fadly.</span>
             </div>
           </Reveal>
           <Reveal delay={140}>
             <div className="hero__name-row hero__name-row--2">
               <span className="hero__name-sans">Ahmad</span>
               <span className="hero__name-amp">&amp;</span>
-              <span className="hero__name-italic">Firdausy.</span>
+              <span className="hero__name-sans">Firdausy</span>
             </div>
           </Reveal>
         </div>
@@ -244,7 +244,7 @@ function Hero() {
             </Reveal>
             <Reveal delay={340} className="hero__ctas">
               <a href="#work" className="btn btn--primary">View Projects <span aria-hidden="true">→</span></a>
-              {hasCv && <a href={PROFILE.cvUrl} className="btn btn--ghost">Download CV <span aria-hidden="true">↓</span></a>}
+              {hasCv && <a href={PROFILE.cvUrl} download="Fadly_Ahmad_Firdausy_CV.pdf" className="btn btn--ghost">Download CV <span aria-hidden="true">↓</span></a>}
               <a href="#contact" className="btn btn--text">Contact Me <span aria-hidden="true">→</span></a>
             </Reveal>
           </div>
@@ -309,33 +309,42 @@ function About() {
         <div className="about__grid">
           <Reveal className="about__body">
             <p className="about__lead">
-              I work at the seam where engineering meets the customer — designing solutions that are technically credible
-              and commercially defensible. My background blends three muscles most enterprises hire separately: presales
-              architecture, product management, and IoT delivery.
+              I work at the seam where engineering meets the customer — designing solutions that are technically credible,
+              commercially defensible, and built to close. My background blends three muscles most enterprises hire separately:
+              presales architecture, product management, and IoT delivery.
             </p>
             <p>
-              At <strong>Indosat</strong> I assess and shape enterprise ICT opportunities — running discovery, drafting
-              architectures, owning proposals, and standing up in front of client architects to defend the design. Before
-              that, at <strong>Iotera</strong>, I managed 13+ concurrent IoT projects for clients like Pegadaian,
-              Pertamina, BPODT, and KPP Mining (Astra) — handling vendors, field ops, and governance reviews without
-              dropping a milestone.
+              At <strong>Indosat Ooredoo Hutchison</strong>, I'm embedded in the enterprise ICT engine — running discovery
+              with clients like <strong>MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, and KBIJ</strong>; designing
+              architectures spanning connectivity, managed services, and enterprise ICT; authoring BOQs and full technical
+              proposals; and defending the design in tech-clarification sessions with client architects. In the first 5
+              months, I've supported <strong>IDR 2B+ in bookings across 20+ enterprise opportunities</strong>.
             </p>
             <p>
-              Earlier roles at <strong>Erajaya</strong>, <strong>Bank Aladin</strong>, and <strong>Tower Bersama</strong> built
-              the product and PMO half of my toolkit — PRDs, wireframes, sprint planning, data work in Metabase, and one
-              internal security tool I shipped end-to-end during an internship.
+              Before that: 2 years at <strong>Iotera</strong> running 13 concurrent IoT projects for SOE-grade clients —
+              delivering a 20% efficiency lift across the portfolio. Earlier product and PMO roles at <strong>Erajaya</strong>,
+              <strong> Bank Aladin</strong>, and <strong>Tower Bersama</strong> built the full lifecycle toolkit:
+              PRDs, Metabase dashboards, sprint planning, and one internal security tool I shipped end-to-end as an intern.
             </p>
             <p>
               I'm equally comfortable with sales, product, engineering, vendors, and enterprise clients in the same room —
-              which, more often than not, is exactly where deals get unstuck.
+              which is exactly where deals get unstuck.
             </p>
           </Reveal>
 
           <Reveal delay={120} className="about__side">
+            {PROFILE.photo && (
+              <div className="about__photo-card">
+                <img src={PROFILE.photo} alt="Fadly Ahmad Firdausy" loading="lazy" />
+                <div className="about__photo-badge">
+                  <span className="dot" aria-hidden="true" /> Available · Jakarta
+                </div>
+              </div>
+            )}
             <div className="about__card">
               <div className="about__card-head">What I do best</div>
               <ul className="about__list">
-                <li><span className="num">01</span> Translate ambiguous business asks into solution architectures and BOQs.</li>
+                <li><span className="num">01</span> Translate ambiguous enterprise asks into solution architectures and BOQs.</li>
                 <li><span className="num">02</span> Run delivery on IoT and ICT projects without dropping margin or dates.</li>
                 <li><span className="num">03</span> Write the PRD, sit with engineering, and ship.</li>
                 <li><span className="num">04</span> Be the bridge between commercial, product, and engineering.</li>
@@ -344,8 +353,9 @@ function About() {
             <div className="about__card about__card--alt">
               <div className="about__card-head">Working with me</div>
               <p className="about__note">
-                Structured, written-first, calm in escalation. I default to clarity over jargon and prefer
-                <em className="italic"> decisions over decks</em> when the room is ready for one.
+                Engineering-native, data-first, AI-forward. My computer engineering foundation means I structure problems
+                in queries before decks — and I use LLM tools as active accelerators, not novelties. I stay calm when
+                escalation happens and move decisively when the analysis is there.
               </p>
             </div>
           </Reveal>
@@ -652,20 +662,32 @@ function Recognition() {
         <div className="recog-strip">
           {RECOGNITION.map((r, i) => {
             const { num, suffix } = ordinal(r.place);
+            const inner = (
+              <article className={`recog-cell${r.url ? " recog-cell--linked" : ""}`}>
+                <div className="recog-cell__numeral" aria-hidden="true">
+                  <span className="recog-cell__num">{num}</span>
+                  <span className="recog-cell__suf">{suffix}</span>
+                </div>
+                <div className="recog-cell__meta">
+                  <span className="recog-cell__place">{r.place}</span>
+                  <span className="recog-cell__year">{r.year}</span>
+                </div>
+                <h3 className="recog-cell__title">{r.event}</h3>
+                <p className="recog-cell__note">{r.note}</p>
+                {r.url && (
+                  <span className="recog-cell__deck-cta" aria-hidden="true">
+                    View deck <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
+                )}
+              </article>
+            );
             return (
               <Reveal key={r.event} delay={i * 100}>
-                <article className="recog-cell">
-                  <div className="recog-cell__numeral" aria-hidden="true">
-                    <span className="recog-cell__num">{num}</span>
-                    <span className="recog-cell__suf">{suffix}</span>
-                  </div>
-                  <div className="recog-cell__meta">
-                    <span className="recog-cell__place">{r.place}</span>
-                    <span className="recog-cell__year">{r.year}</span>
-                  </div>
-                  <h3 className="recog-cell__title">{r.event}</h3>
-                  <p className="recog-cell__note">{r.note}</p>
-                </article>
+                {r.url ? (
+                  <a href={r.url} target="_blank" rel="noopener noreferrer" className="recog-cell-link">
+                    {inner}
+                  </a>
+                ) : inner}
               </Reveal>
             );
           })}
@@ -732,9 +754,9 @@ function Contact() {
                 <span className="cta__card-arrow" aria-hidden="true">↗</span>
               </a>
               {hasCv ? (
-                <a href={PROFILE.cvUrl} className="cta__card">
+                <a href={PROFILE.cvUrl} download="Fadly_Ahmad_Firdausy_CV.pdf" className="cta__card">
                   <span className="cta__card-k">Curriculum Vitae</span>
-                  <span className="cta__card-v">Download PDF</span>
+                  <span className="cta__card-v">Download PDF ↓</span>
                   <span className="cta__card-arrow" aria-hidden="true">↓</span>
                 </a>
               ) : (
