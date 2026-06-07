@@ -10,7 +10,7 @@ const PROFILE = {
   email: "fadlyahmadfirdausy@gmail.com",
   linkedin: "linkedin.com/in/fadlyahmadfirdausy",
   cvUrl: "Fadly_Ahmad_Firdausy_CV.pdf",
-  photo: "fadly-headshot.jpg",
+  photo: "fadly-headshot.png",
 };
 
 const METRICS = [
@@ -225,7 +225,7 @@ const RECOGNITION = [
     event: "Hack The Product × Mekari",
     note: "Proposed 2 flagship Mekari Flex products with projected revenue of ~IDR 5T/year.",
     year: "Dec 2022",
-    url: null,
+    url: "HTP_Mekari_Fadly.pdf",
   },
   {
     place: "3rd Place",
