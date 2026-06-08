@@ -276,8 +276,12 @@ const SKILLS = [
     items: ["AI-assisted Workflows", "Prompt Engineering", "Computer Vision (YOLOv5)", "LLM Integration", "Deep Learning", "Network Security Fundamentals"],
   },
   {
-    group: "Tools & Analytics",
-    items: ["Jira", "ClickUp", "Figma", "Metabase", "Cisco CCW / ISE estimator", "Google Sheets", "Google Analytics"],
+    group: "Tools",
+    items: ["Jira", "ClickUp", "Figma", "Cisco CCW / ISE estimator", "Google Sheets"],
+  },
+  {
+    group: "Data & Analytics",
+    items: ["Metabase Dashboards", "KPI Tracking (MAU · Retention · CSAT)", "Data-driven Prioritisation", "Requirement Analysis", "Reporting & RAID Logs", "Google Analytics"],
   },
 ];
 

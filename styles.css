@@ -1561,3 +1561,253 @@ button:focus-visible,
   opacity: 0.55;
   margin: 0 0 1rem;
 }
+
+/* ============================================================
+   SWISS / INTERNATIONAL REDESIGN  (overlay — overrides above)
+   Flat, typographic, grid + 1px hairline rules, single red accent.
+   ============================================================ */
+
+/* Flatten: kill shadows, radius, gradients (the AI-slop tells) */
+.about__photo-card, .hero__card, .skill-card, .case-card, .recog-cell,
+.edu-card, .cta__card, .metric, .nav, .modal__panel, .tl-row, .pill,
+.nav__brand-mark, .nav__cta, .btn {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background-image: none !important;
+}
+.hero__bg { display: none !important; }
+.about__photo-card::after { display: none !important; }
+.section--cta, .section--recog { background-image: none !important; }
+
+/* Type: neo-grotesque, no serif-italic flourishes */
+body { font-family: var(--sans); }
+.italic, em.italic, .sec-head__title em, .hero__card-quote em, .cta__title em {
+  font-family: var(--sans);
+  font-style: normal;
+  color: var(--accent);
+}
+.hero__name-italic { font-style: normal; }
+
+/* Mono labels everywhere structural */
+.sec-head__kicker, .sec-head__index, .hero__eyebrow, .hero__id, .hero__role,
+.case-card__tag, .case-card__period, .skill-card__idx, .edu-card__kind,
+.recog-cell__place, .recog-cell__year, .cta__card-k, .nav__links a,
+.nav__brand-sub, .rail__n, .footer__mono, .cases-more__label, .metric__idx,
+.metric__note, .tl-row__year, .tl-row__loc, .pill, .btn {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Section header: rule + label row + big flush-left title */
+.sec-head {
+  border-top: 1.5px solid var(--ink);
+  padding-top: clamp(18px, 2vw, 28px);
+  margin-bottom: clamp(36px, 5vw, 72px);
+}
+.sec-head__index { color: var(--accent); font-weight: 600; font-size: 12px; }
+.sec-head__kicker { font-size: 12px; color: var(--ink-3); }
+.sec-head__title {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  font-size: clamp(34px, 5.4vw, 78px);
+  max-width: 20ch;
+  text-transform: none;
+}
+.sec-head__lede { color: var(--ink-2); max-width: 56ch; }
+
+/* Sections */
+.section--alt { background: var(--bg-2); }
+
+/* Hero */
+.hero { border-bottom: 1.5px solid var(--ink); }
+.hero__eyebrow, .hero__id, .hero__role { font-size: 12px; color: var(--ink-3); }
+.hero__role { color: var(--ink-2); letter-spacing: 0.14em; }
+.hero__role-sep { background: var(--ink-4); }
+.hero__lede { font-size: clamp(18px, 1.6vw, 23px); line-height: 1.36; color: var(--ink-2); max-width: 42ch; }
+.hero__name-sans { font-weight: 600; color: var(--ink); }
+.hero__card { border: 1.5px solid var(--ink); background: transparent; }
+.hero__card-quote em { font-style: normal; color: var(--ink); }
+.hero__card-tag, .hero__card-id, .kv-k { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); }
+
+/* Buttons: flat, ruled */
+.btn { font-size: 13px; padding: 14px 22px; border: 1.5px solid var(--ink); letter-spacing: 0.1em; }
+.btn--primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.btn--text { border: none; padding-left: 0; }
+
+/* Metrics: ruled row, no boxes */
+.metrics { border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.metric { border-left: 1px solid var(--line); padding: clamp(18px,2vw,30px) clamp(14px,1.4vw,22px); }
+.metric:first-child { border-left: none; }
+.metric__value { font-weight: 600; letter-spacing: -0.03em; font-size: clamp(28px,3vw,48px); }
+.metric__label { color: var(--ink-2); }
+@media (max-width: 720px) { .metrics { grid-template-columns: repeat(2,1fr); } .metric:nth-child(3) { border-left: none; } }
+
+/* Cards -> bordered flat blocks */
+.case-card, .skill-card, .edu-card, .recog-cell {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  padding: clamp(20px, 2vw, 30px);
+}
+.case-card__title, .skill-card__title, .edu-card__title { font-weight: 600; letter-spacing: -0.02em; }
+.case-card__tag, .case-card__period, .skill-card__idx, .edu-card__kind, .cta__card-k, .recog-cell__place, .recog-cell__year { font-size: 11px; color: var(--ink-3); }
+.pill { border: 1px solid var(--line-strong); background: transparent; font-size: 11px; letter-spacing: 0.06em; }
+.case-card__cta { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: var(--accent); }
+
+/* Experience: ruled rows */
+.tl-row { border-top: 1px solid var(--line-strong); }
+.tl-row__role { font-weight: 600; }
+.tl-row__impact-v { font-family: var(--mono); color: var(--accent); }
+
+/* Recognition */
+.recog-cell__num, .recog-cell__suf { font-weight: 600; color: var(--accent); }
+
+/* Nav */
+.nav { border-bottom: 1px solid var(--line); background: color-mix(in oklab, var(--bg) 90%, transparent); }
+.nav__links a, .nav__brand-sub { font-size: 12px; }
+.nav__brand-mark, .nav__cta { border: 1.5px solid var(--ink); }
+
+/* Contact / footer */
+.cta__title { font-weight: 600; letter-spacing: -0.03em; }
+.cta__card { border: 1.5px solid var(--ink); }
+.footer { border-top: 1.5px solid var(--ink); }
+
+/* ============================================================
+   SWISS REFINEMENT PASS — bigger hero, rhythm, ruled skill list
+   ============================================================ */
+
+/* Vertical rhythm: more disciplined whitespace */
+.section { padding: clamp(96px, 11vw, 168px) 0; }
+.sec-head { margin-bottom: clamp(48px, 6vw, 88px); }
+
+/* Hero: larger, flush-left, tighter baseline */
+.hero { padding-top: clamp(120px, 14vh, 184px); padding-bottom: clamp(64px, 8vw, 112px); }
+.hero__name-block { margin-bottom: clamp(36px, 5vw, 76px); }
+.hero__name-row { line-height: 0.82; letter-spacing: -0.045em; }
+.hero__name-row--1 { margin-bottom: clamp(2px, 0.4vw, 8px); }
+.hero__name-row--2 { padding-left: 0; font-size: clamp(34px, 5.6vw, 92px); }
+.hero__name-italic { font-size: clamp(80px, 16.5vw, 250px); font-weight: 700; letter-spacing: -0.05em; }
+.hero__name-sans { font-weight: 600; }
+
+/* Skills + Certifications: ruled spec-sheet, not boxed cards */
+.skills { display: block; }
+.skill-card {
+  border: none !important;
+  border-top: 1.5px solid var(--line-strong) !important;
+  border-radius: 0 !important;
+  padding: clamp(20px, 2.4vw, 36px) 0 !important;
+  display: grid;
+  grid-template-columns: minmax(150px, 240px) 1fr;
+  gap: clamp(14px, 3vw, 56px);
+  align-items: start;
+}
+.skills .reveal:last-child .skill-card { border-bottom: 1.5px solid var(--line-strong) !important; }
+.skill-card__head { display: flex; gap: 12px; align-items: baseline; margin: 0; }
+.skill-card__idx { color: var(--accent); font-weight: 600; }
+.skill-card__title { font-family: var(--sans); font-size: clamp(17px, 1.4vw, 22px); font-weight: 600; letter-spacing: -0.01em; text-transform: none; margin: 0; }
+.skill-card__list { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0; padding: 0; list-style: none; }
+.skill-card__list li {
+  font-family: var(--sans);
+  font-size: clamp(13px, 1vw, 15.5px);
+  color: var(--ink-2);
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0;
+}
+.skill-card__list li::after { content: "·"; color: var(--ink-4); margin: 0 14px; }
+.skill-card__list li:last-child::after { display: none; }
+@media (max-width: 640px) {
+  .skill-card { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* ============================================================
+   RECOGNITION FIX — one straight Swiss table, no offset boxes
+   ============================================================ */
+.recog-strip {
+  border: 1.5px solid var(--ink);
+  align-items: stretch;
+}
+.recog-strip > * {
+  border-left: 1.5px solid var(--ink);
+  display: flex;
+}
+.recog-strip > *:first-child { border-left: none; }
+.recog-cell-link { display: flex; width: 100%; }
+.recog-cell {
+  border: none !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  padding: clamp(28px, 3vw, 46px) clamp(24px, 2.4vw, 38px) !important;
+}
+@media (max-width: 760px) {
+  .recog-strip > * { border-left: none; border-top: 1.5px solid var(--ink); }
+  .recog-strip > *:first-child { border-top: none; }
+}
+
+/* ============================================================
+   SKILLS + CERTIFICATIONS — one continuous Swiss table
+   Shared collapsed borders, equal cells (matches Recognition).
+   ============================================================ */
+#skills .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1.5px solid var(--ink); }
+#certifications .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1.5px solid var(--ink); }
+
+#skills .skills > .reveal,
+#certifications .skills > .reveal { display: flex; border-left: 1.5px solid var(--ink); border-top: 1.5px solid var(--ink); }
+#skills .skills > .reveal:nth-child(-n+4) { border-top: none; }
+#skills .skills > .reveal:nth-child(4n+1) { border-left: none; }
+#certifications .skills > .reveal:nth-child(-n+2) { border-top: none; }
+#certifications .skills > .reveal:nth-child(2n+1) { border-left: none; }
+
+.skill-card {
+  border: none !important;
+  margin: 0 !important;
+  width: 100%;
+  display: block !important;
+  padding: clamp(22px, 2.4vw, 34px) clamp(20px, 2vw, 28px) !important;
+}
+.skill-card__head {
+  display: flex; gap: 12px; align-items: baseline;
+  margin: 0 0 clamp(16px, 1.8vw, 22px);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.skill-card__idx { color: var(--accent); font-weight: 600; font-family: var(--mono); }
+.skill-card__title { font-family: var(--sans); font-weight: 600; font-size: clamp(16px, 1.3vw, 20px); letter-spacing: -0.01em; text-transform: none; margin: 0; }
+.skill-card__list { display: flex; flex-direction: column; gap: 11px; margin: 0; padding: 0; list-style: none; }
+.skill-card__list li {
+  position: relative; padding-left: 18px;
+  font-family: var(--sans); font-size: clamp(13px, 1vw, 15.5px);
+  color: var(--ink-2); text-transform: none; letter-spacing: 0;
+}
+.skill-card__list li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.skill-card__list li::after { display: none !important; }
+
+@media (max-width: 900px) {
+  #skills .skills { grid-template-columns: repeat(2, 1fr); }
+  #skills .skills > .reveal { border-top: 1.5px solid var(--ink) !important; border-left: 1.5px solid var(--ink) !important; }
+  #skills .skills > .reveal:nth-child(-n+2) { border-top: none !important; }
+  #skills .skills > .reveal:nth-child(2n+1) { border-left: none !important; }
+}
+@media (max-width: 560px) {
+  #skills .skills, #certifications .skills { grid-template-columns: 1fr; }
+  #skills .skills > .reveal, #certifications .skills > .reveal { border-left: none !important; border-top: 1.5px solid var(--ink) !important; }
+  #skills .skills > .reveal:first-child, #certifications .skills > .reveal:first-child { border-top: none !important; }
+}
+
+/* ============================================================
+   WORK CARDS — separate, equal height (taller), no gradient glow
+   ============================================================ */
+.case-card::after { display: none !important; }   /* kill pink gradient slop */
+@media (min-width: 980px) { .cases { grid-template-columns: repeat(3, 1fr); } }
+.cases { grid-auto-rows: 1fr; }
+.cases > .reveal { display: flex; }
+.case-card {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(460px, 36vw, 580px);
+}
+.case-card__cta { margin-top: auto; padding-top: 8px; }
