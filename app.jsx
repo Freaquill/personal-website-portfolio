@@ -45,8 +45,9 @@ function App() {
         <Experience />
         <Work />
         <Skills />
-        <Recognition />
+        <Certifications />
         <Education />
+        <Recognition />
         <Contact />
       </main>
 

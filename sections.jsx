@@ -44,9 +44,10 @@ function SectionRail() {
     { id: "experience", n: "03", label: "Experience" },
     { id: "work", n: "04", label: "Work" },
     { id: "skills", n: "05", label: "Skills" },
-    { id: "recognition", n: "06", label: "Recognition" },
+    { id: "certifications", n: "06", label: "Certifications" },
     { id: "education", n: "07", label: "Education" },
-    { id: "contact", n: "08", label: "Contact" },
+    { id: "recognition", n: "08", label: "Recognition" },
+    { id: "contact", n: "09", label: "Contact" },
   ];
   const [active, setActive] = useState("top");
 
@@ -216,14 +217,12 @@ function Hero() {
           <Reveal delay={60}>
             <div className="hero__name-row hero__name-row--1">
               <span className="hero__num">01</span>
-              <span className="hero__name-italic">Fadly.</span>
+              <span className="hero__name-italic">Fadly</span>
             </div>
           </Reveal>
           <Reveal delay={140}>
             <div className="hero__name-row hero__name-row--2">
-              <span className="hero__name-sans">Ahmad</span>
-              <span className="hero__name-amp">&amp;</span>
-              <span className="hero__name-sans">Firdausy</span>
+              <span className="hero__name-sans">Ahmad Firdausy</span>
             </div>
           </Reveal>
         </div>
@@ -232,9 +231,9 @@ function Hero() {
           <div className="hero__below-left">
             <Reveal delay={220}>
               <p className="hero__role">
-                <span>B2B Presales Engineer</span><span className="hero__role-sep" />
-                <span>Product Manager</span><span className="hero__role-sep" />
-                <span>IoT Solutions</span>
+                <span>Presales Engineer</span><span className="hero__role-sep" />
+                <span>Product &amp; Project Manager</span><span className="hero__role-sep" />
+                <span>Enterprise Solutions &amp; IoT</span>
               </p>
             </Reveal>
             <Reveal delay={280}>
@@ -252,6 +251,14 @@ function Hero() {
           <Reveal delay={400} className="hero__card-wrap">
             <div className="hero__card">
               <div className="hero__card-head">
+                {PROFILE.photo && (
+                  <span className="hero__card-avatar">
+                    <picture>
+                      {PROFILE.photoWebp && <source type="image/webp" srcSet={PROFILE.photoWebp} />}
+                      <img src={PROFILE.photo} alt="Fadly Ahmad Firdausy" width="96" height="96" loading="eager" />
+                    </picture>
+                  </span>
+                )}
                 <span className="hero__card-tag">Positioning</span>
                 <span className="hero__card-id">— Profile</span>
               </div>
@@ -314,17 +321,20 @@ function About() {
               presales architecture, product management, and IoT delivery.
             </p>
             <p>
-              At <strong>Indosat Ooredoo Hutchison</strong>, I'm embedded in the enterprise ICT engine — running discovery
+              At <strong>Indosat Ooredoo Hutchison</strong>, I own enterprise solution deals end-to-end — running discovery
               with clients like <strong>MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, and KBIJ</strong>; designing
-              architectures spanning connectivity, managed services, and enterprise ICT; authoring BOQs and full technical
-              proposals; and defending the design in tech-clarification sessions with client architects. In the first 5
-              months, I've supported <strong>IDR 2B+ in bookings across 20+ enterprise opportunities</strong>.
+              architectures across connectivity, IoT/M2M, device management (MDM), data center, and chatbot; authoring
+              solution designs, BoQs, business cases, and full technical proposals; and defending the design in
+              tech-clarification sessions with client architects. Together that's shaped an
+              <strong> IDR 15B+ enterprise solutions portfolio across 20+ opportunities</strong>.
             </p>
             <p>
-              Before that: 2 years at <strong>Iotera</strong> running 13 concurrent IoT projects for SOE-grade clients —
-              delivering a 20% efficiency lift across the portfolio. Earlier product and PMO roles at <strong>Erajaya</strong>,
-              <strong> Bank Aladin</strong>, and <strong>Tower Bersama</strong> built the full lifecycle toolkit:
-              PRDs, Metabase dashboards, sprint planning, and one internal security tool I shipped end-to-end as an intern.
+              Before that, as the <strong>sole project manager at Iotera — reporting directly to the CEO</strong> — I
+              independently delivered a portfolio of 13 IoT projects from discovery to sign-off, including RFID
+              smart-vault and smart-cabinet systems for major banks and a nationwide cashless-vending rollout, lifting
+              delivery efficiency ~20%. Earlier product and PMO roles at <strong>Erajaya</strong>, <strong>Bank Aladin</strong>,
+              and <strong>Tower Bersama</strong> built the full lifecycle toolkit: PRDs, Metabase dashboards, sprint
+              planning, and one internal security tool I shipped end-to-end as an intern.
             </p>
             <p>
               I'm equally comfortable with sales, product, engineering, vendors, and enterprise clients in the same room —
@@ -452,6 +462,36 @@ function Work() {
     return () => { document.body.style.overflow = ""; };
   }, [focus]);
 
+  const featured = CASES.filter(c => c.featured);
+  const secondary = CASES.filter(c => !c.featured);
+
+  const renderCard = (c, i) => (
+    <Reveal key={c.id} delay={i * 70}>
+      <article className="case-card">
+        <header className="case-card__head">
+          <span className="case-card__tag">{c.tag}</span>
+          <span className="case-card__period">{c.period}</span>
+        </header>
+        <h3 className="case-card__title">{c.title}</h3>
+        <div className="case-card__company">{c.company}</div>
+        <p className="case-card__headline">{c.headline}</p>
+
+        <ul className="case-card__bullets">
+          {c.impact.slice(0, 2).map((b, j) => <li key={j}>{b}</li>)}
+        </ul>
+
+        <div className="case-card__chips">
+          {c.tools.slice(0, 4).map((t, j) => <Pill key={j}>{t}</Pill>)}
+          {c.tools.length > 4 && <span className="case-card__more">+{c.tools.length - 4}</span>}
+        </div>
+
+        <button className="case-card__cta" onClick={() => setFocus(c.id)}>
+          Read case study <span aria-hidden="true">→</span>
+        </button>
+      </article>
+    </Reveal>
+  );
+
   return (
     <section className="section" id="work">
       <div className="container">
@@ -459,37 +499,21 @@ function Work() {
           index="04"
           kicker="Featured Work"
           title={<>Selected projects, in <em className="italic">depth.</em></>}
-          lede="Five case studies you can open inline — problem, role, approach, impact, and the tools that got it shipped."
+          lede="Flagship enterprise and IoT projects you can open inline — problem, role, solution, impact, and the tools that got it shipped."
         />
 
         <div className="cases">
-          {CASES.map((c, i) => (
-            <Reveal key={c.id} delay={i * 70}>
-              <article className="case-card">
-                <header className="case-card__head">
-                  <span className="case-card__tag">{c.tag}</span>
-                  <span className="case-card__period">{c.period}</span>
-                </header>
-                <h3 className="case-card__title">{c.title}</h3>
-                <div className="case-card__company">{c.company}</div>
-                <p className="case-card__headline">{c.headline}</p>
-
-                <ul className="case-card__bullets">
-                  {c.impact.slice(0, 2).map((b, j) => <li key={j}>{b}</li>)}
-                </ul>
-
-                <div className="case-card__chips">
-                  {c.tools.slice(0, 4).map((t, j) => <Pill key={j}>{t}</Pill>)}
-                  {c.tools.length > 4 && <span className="case-card__more">+{c.tools.length - 4}</span>}
-                </div>
-
-                <button className="case-card__cta" onClick={() => setFocus(c.id)}>
-                  Read case study <span aria-hidden="true">→</span>
-                </button>
-              </article>
-            </Reveal>
-          ))}
+          {featured.map(renderCard)}
         </div>
+
+        {secondary.length > 0 && (
+          <div className="cases-more">
+            <div className="cases-more__label">More projects</div>
+            <div className="cases cases--secondary">
+              {secondary.map(renderCard)}
+            </div>
+          </div>
+        )}
       </div>
 
       {current && <CaseModal data={current} onClose={() => setFocus(null)} />}
@@ -584,6 +608,13 @@ function CaseModal({ data, onClose }) {
             </div>
           </div>
 
+          {data.solution && (
+            <div className="modal__block">
+              <div className="kv-k">Solution</div>
+              <p className="modal__p">{data.solution}</p>
+            </div>
+          )}
+
           <div className="modal__block">
             <div className="kv-k">Approach</div>
             <ul className="modal__list">
@@ -641,6 +672,38 @@ function Skills() {
   );
 }
 
+/* ---------- Certifications ---------- */
+
+function Certifications() {
+  return (
+    <section className="section" id="certifications">
+      <div className="container">
+        <SectionHeader
+          index="06"
+          kicker="Certifications"
+          title={<>Presales & product, <em className="italic">credentialed.</em></>}
+          lede="Cisco presales enablement and product-management certifications backing the technical and commercial work."
+        />
+        <div className="skills">
+          {CERTIFICATIONS.map((g, i) => (
+            <Reveal key={g.group} delay={i * 60}>
+              <div className="skill-card">
+                <div className="skill-card__head">
+                  <span className="skill-card__idx">0{i + 1}</span>
+                  <h3 className="skill-card__title">{g.group}</h3>
+                </div>
+                <ul className="skill-card__list">
+                  {g.items.map((s) => <li key={s}>{s}</li>)}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Recognition ---------- */
 
 function Recognition() {
@@ -654,7 +717,7 @@ function Recognition() {
     <section className="section section--recog" id="recognition">
       <div className="container">
         <SectionHeader
-          index="06"
+          index="08"
           kicker="Recognition"
           title={<>Three national podiums. <em className="italic">One product muscle.</em></>}
           lede="Hack The Product runs short-window product challenges with real business problems from the host company. Three top-3 finishes across three industries."
@@ -705,7 +768,7 @@ function Education() {
       <div className="container">
         <SectionHeader
           index="07"
-          kicker="Education & Certification"
+          kicker="Education"
           title={<>Formal foundations, <em className="italic">applied</em> ever since.</>}
         />
         <div className="edu">
@@ -787,5 +850,5 @@ function Contact() {
 }
 
 Object.assign(window, {
-  Reveal, SectionHeader, SectionRail, Pill, TopNav, Hero, About, Experience, Work, CaseModal, Skills, Recognition, Education, Contact,
+  Reveal, SectionHeader, SectionRail, Pill, TopNav, Hero, About, Experience, Work, CaseModal, Skills, Certifications, Recognition, Education, Contact,
 });

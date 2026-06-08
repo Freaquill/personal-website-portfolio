@@ -4,19 +4,20 @@ const PROFILE = {
   name: "Fadly Ahmad Firdausy",
   initials: "FA",
   location: "Jakarta, Indonesia",
-  title: "B2B Presales Engineer · Product Manager · IoT Solutions",
-  positioning: "B2B Presales Engineer, Product Manager, and IoT Solutions professional who bridges technical solution design, commercial strategy, and cross-functional product delivery.",
-  valueProp: "I help enterprise teams turn technical challenges into scalable ICT, connectivity, IoT, and digital product solutions.",
+  title: "Presales Engineer · Product & Project Manager · Enterprise Solutions & IoT",
+  positioning: "Enterprise technology professional bridging presales engineering and product/project management — turning complex requirements into scalable, commercially sound solutions across connectivity, IoT, device management, and data center.",
+  valueProp: "I work across the full arc of an enterprise deal — discovering the client's problem, designing the technical solution, and delivering it through to sign-off.",
   email: "fadlyahmadfirdausy@gmail.com",
+  phone: "+62-811-808-5045",
   linkedin: "linkedin.com/in/fadlyahmadfirdausy",
   cvUrl: "Fadly_Ahmad_Firdausy_CV.pdf",
   photo: "fadly-headshot.png",
 };
 
 const METRICS = [
-  { value: "IDR 2B+", label: "Revenue supported", note: "First 5 months at Indosat" },
-  { value: "20+", label: "Enterprise ICT projects", note: "Technical & commercial assessments" },
-  { value: "13", label: "IoT projects managed", note: "Pegadaian, Pertamina, Astra, +" },
+  { value: "IDR 15B+", label: "Enterprise solutions portfolio", note: "Multi-account presales, Indosat" },
+  { value: "20+", label: "Enterprise opportunities", note: "Connectivity, IoT, MDM, data center" },
+  { value: "13", label: "IoT projects delivered", note: "Sole PM — Astra, BSI, Pegadaian, +" },
   { value: "3×", label: "National product wins", note: "Hack The Product circuit" },
 ];
 
@@ -28,17 +29,17 @@ const EXPERIENCE = [
     period: "Sep 2025 — Present",
     location: "Jakarta, ID",
     type: "Full-time",
-    summary: "Lead technical and commercial assessment for enterprise ICT and connectivity opportunities — turning client problems into winning architectures, BOQs, and proposals. Contributed IDR 2B+ in revenue within the first 5 months across 20+ enterprise projects.",
+    summary: "Own enterprise solution deals end-to-end across a multi-account presales portfolio — connectivity, IoT/M2M, device management (MDM), data center, and chatbot — for rail, aviation, manufacturing, and finance clients. Shaped an IDR 15B+ enterprise solutions portfolio across 20+ opportunities.",
     responsibilities: [
-      "Authored end-to-end technical proposals and high-level designs for marquee clients: MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, and KBIJ — covering managed services, connectivity, and enterprise ICT portfolios.",
-      "Spearheaded assessment of technical and pricing aspects for ICT and connectivity across 20+ projects, ensuring alignment with client requirements, technical feasibility, and business objectives.",
-      "Designed solution architectures spanning connectivity, managed services, IoT, and enterprise ICT — then stood up in front of client architects to defend the design in tech-clarification sessions.",
-      "Collaborated cross-functionally with sales, product, pricing, procurement, and vendor teams to structure competitive, value-based solutions.",
+      "Author the full presales deliverable stack — solution designs (MLD), technical proposals, BoQs, business cases, HLDs, POC checklists, and multi-vendor assessments — for marquee clients: MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, and KBIJ.",
+      "Design solution architectures spanning connectivity, managed services, IoT/M2M, device management (MDM), and data center — then defend the design in tech-clarification sessions with client architects.",
+      "Run multi-vendor MDM assessments and device-bundling proposals (iPad and laptop fleets with managed services) for enterprise mobility programs.",
+      "Collaborate cross-functionally with sales, product, pricing, procurement, and vendor teams to structure competitive, value-based solutions.",
     ],
     impact: [
-      { v: "IDR 2B+", k: "revenue supported in first 5 months" },
-      { v: "20+", k: "enterprise opportunities assessed across mining, FSI, retail, and public sector" },
-      { v: "6+", k: "marquee client proposals authored: MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, KBIJ" },
+      { v: "IDR 15B+", k: "multi-account enterprise solutions portfolio shaped" },
+      { v: "20+", k: "enterprise opportunities across rail, aviation, manufacturing, finance" },
+      { v: "6+", k: "marquee client proposals: MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, KBIJ" },
     ],
   },
   {
@@ -48,17 +49,17 @@ const EXPERIENCE = [
     period: "Sep 2023 — Sep 2025",
     location: "Bandung, ID",
     type: "Full-time",
-    summary: "Owned the IoT delivery portfolio end-to-end — from kickoff to handover — across enterprise clients deploying field connectivity, sensors, and dashboards. Drove a 20% boost in delivery efficiency by restructuring cross-functional workflows.",
+    summary: "Sole project manager (reporting directly to the CEO) owning a 13-project IoT portfolio end-to-end — from discovery to sign-off — for SOE-grade clients. Restructured the cross-functional workflow to lift delivery efficiency ~20%.",
     responsibilities: [
-      "Concurrently managed a portfolio of 13 IoT projects (5 delivered, 3 recurring, 5 ongoing) for Pegadaian, Telkomsel, Pertamina, BPODT, and KPP Mining by Astra Group.",
-      "Led ideation and conception for each client engagement — translating complex operational challenges into scalable IoT architectures and winning proposals.",
-      "Drove a 20% boost in delivery efficiency by leading a cross-functional team restructure and standardising end-to-end workflows from ideation through client handover.",
-      "Built delivery dashboards, risk registers, and stakeholder reports; ran weekly governance reviews with client PMOs.",
+      "Sole project manager, reporting directly to the CEO — independently owned a portfolio of 13 IoT projects (5 delivered, 3 recurring, 5 ongoing) for KPP/Pama (Astra), BSI, Pegadaian, Pertamina, and Telkomsel.",
+      "Led solution ideation and technical proposals — translating ambiguous operational problems into scalable IoT architectures (RFID smart-vault and smart-cabinet, fatigue-check chamber, nationwide cashless vending).",
+      "Owned rollout and integration management — RFID and QRIS payment integration, vendor coordination, SIT/UAT, and BAST sign-off.",
+      "Restructured the cross-functional delivery workflow, lifting delivery efficiency ~20%; ran governance reviews with client stakeholders.",
     ],
     impact: [
-      { v: "13", k: "concurrent IoT deployments (5 delivered, 3 recurring, 5 ongoing)" },
-      { v: "20%", k: "boost in delivery efficiency via cross-functional team restructure" },
-      { v: "5+", k: "enterprise & SOE clients: Pegadaian, Pertamina, Astra, BPODT, Telkomsel" },
+      { v: "13", k: "concurrent IoT projects as sole PM (5 delivered, 3 recurring, 5 ongoing)" },
+      { v: "~20%", k: "delivery efficiency lift via workflow restructure" },
+      { v: "5+", k: "SOE-grade clients: Astra/KPP, BSI, Pegadaian, Pertamina, Telkomsel" },
     ],
   },
   {
@@ -118,77 +119,145 @@ const EXPERIENCE = [
 
 const CASES = [
   {
-    id: "indosat-presales",
-    tag: "Enterprise ICT",
-    title: "Enterprise ICT & Connectivity Presales",
-    company: "PT Indosat Tbk",
-    period: "Sep 2025 — Present",
-    headline: "Turning 20+ enterprise opportunities into IDR 2B+ booked revenue in 5 months.",
-    problem: "Enterprise clients arrive with mixed asks — connectivity, managed services, IoT, cloud — and need a partner who can translate ambiguous business problems into a defensible technical design and a commercially sound proposal, fast.",
-    role: "B2B Presales Engineer owning technical discovery, solution architecture, BOQ, and proposal authoring; collaborating with account managers on commercial strategy.",
+    id: "dcfc",
+    featured: true,
+    tag: "IoT · Mining Safety",
+    title: "DCFC — Digital Fatigue Check Chamber",
+    company: "KPP / PAMA (Astra Group)",
+    period: "Iotera · 2023—2025",
+    headline: "IoT-powered fitness screening that certifies heavy-equipment operators FIT before every shift.",
+    problem: "Heavy-equipment operators must be physically fit before a mining shift — a safety-critical gate that needed to be objective, fast, and auditable.",
+    role: "End-to-end owner — discovery → technical proposal → delivery.",
+    solution: "A fitness-screening chamber where an Android tablet orchestrates a tensimeter (blood pressure), oximeter, and face-recognition + temperature detection to certify each operator FIT before shift.",
     approach: [
-      "Structured discovery framework — business outcome → technical requirements → constraints — applied across every opportunity.",
-      "Reusable solution patterns for the most common archetypes (multi-site connectivity, hybrid cloud edge, IoT-enabled assets).",
-      "Tight feedback loop with product and engineering to validate feasibility before commitment.",
-      "Tech-clarification rehearsals so the team defends design choices confidently in front of client architects.",
+      "Defined the pre-shift fitness gate with the mining safety team.",
+      "Integrated medical sensors and facial recognition into a single tablet-orchestrated flow.",
+      "Delivered and commissioned the chamber live on-site.",
     ],
     impact: [
-      "IDR 2B+ revenue supported in first 5 months across 20+ enterprise projects.",
-      "Authored proposals for MRT Jakarta, LRT, Danone, Bluebird, Bank Mayapada, and KBIJ.",
-      "Win-rate uplift on opportunities where presales was engaged early in the cycle.",
+      "Delivered as a multi-year engagement, live since end-2023.",
+      "A standout example of IoT applied to workforce safety.",
     ],
-    tools: ["Solution Architecture", "Enterprise ICT", "BOQ", "Technical Proposals", "Value-based Selling", "Core Network"],
+    tools: ["Android Tablet App", "Medical Sensors", "Facial Recognition", "Temperature Sensing", "IoT Data Capture"],
   },
   {
-    id: "iotera-portfolio",
-    tag: "IoT Delivery",
-    title: "IoT Project Portfolio Management",
-    company: "PT Iotera Sinergi Digital",
-    period: "Sep 2023 — Sep 2025",
-    headline: "Delivering 13 concurrent IoT projects for SOE-grade clients — with a 20% efficiency lift.",
-    problem: "An IoT systems integrator running 13 parallel deployments — hardware, connectivity, software, field ops — for clients (Pegadaian, Pertamina, Astra, BPODT, Telkomsel) who don't tolerate slippage.",
-    role: "Project Manager owning end-to-end delivery, governance, vendor coordination, and client communication across the portfolio.",
+    id: "bsi-smartvault",
+    featured: true,
+    tag: "RFID · Banking",
+    title: "SmartVault — RFID Gold-Asset Vault",
+    company: "Bank Syariah Indonesia",
+    period: "Iotera · 2023—2025",
+    headline: "Auditable, real-time RFID control over gold-financing assets, integrated with the bank's core.",
+    problem: "Secure and track gold-financing assets in branch vaults with auditable, real-time control linked to the bank's records.",
+    role: "End-to-end owner — authored all technical documentation (named author of the system user manual); ran delivery, SIT, and BAST sign-off.",
+    solution: "An RFID smart-vault integrated with BSI's NOS core — linking gold-credit records to RFID tags, with role-based teller/approver workflows, guest-book access control, and a management web app.",
     approach: [
-      "Per-project RAID registers and a portfolio-level heatmap so escalations surface before they break the schedule.",
-      "Standardised kickoff, UAT, and handover playbooks — repeatable across clients.",
-      "Tight vendor management cadence; weekly governance reviews with client PMOs.",
-      "Led a cross-functional team restructure that drove a 20% boost in delivery efficiency.",
+      "Authored the full technical documentation and system user manual.",
+      "Integrated RFID tagging and scanning with the NOS core system.",
+      "Ran SIT and BAST sign-off for the branch pilot.",
     ],
     impact: [
-      "13+ IoT projects delivered in parallel for blue-chip enterprise and SOE clients.",
-      "20% boost in delivery efficiency via cross-functional team restructure.",
-      "Repeatable governance model adopted across the delivery org.",
+      "Delivered as a pilot at the BSI Asia Afrika (Bandung) site.",
+      "Designed for expansion to additional branches.",
     ],
-    tools: ["IoT Architecture", "Connectivity", "Managed Services", "Jira", "ClickUp", "Stakeholder Management"],
+    tools: ["RFID Tagging & Scanning", "Web Application", "Core Integration (NOS)", "Role-based Access"],
   },
   {
-    id: "competitions",
-    tag: "Product Competitions",
-    title: "Hack The Product — Three National Podiums",
-    company: "JULO · Mekari · RedDoorz",
-    period: "Sep 2022 — Feb 2023",
-    headline: "Top-3 finishes against national product talent — three different industries, one product muscle.",
-    problem: "Each Hack The Product challenge dropped a real business problem from the host company — fintech credit, SaaS payroll, hospitality — and gave teams a tight window to ship a credible PRD, prototype, and pitch.",
-    role: "Product lead — framing the problem, owning the case, building the deck, fronting the pitch.",
+    id: "smartvending",
+    featured: true,
+    tag: "IoT · Payments",
+    title: "SmartVending — Nationwide Cashless IoT Platform",
+    company: "Nestlé · Octo by CIMB · arcades",
+    period: "Iotera · 2023—2025",
+    headline: "5,000 unattended machines brought online with telemetry and QRIS cashless payments.",
+    problem: "Bring telemetry and cashless payment to a large, heterogeneous fleet of unattended machines across the country.",
+    role: "Project manager for deployment and integration.",
+    solution: "Managed deployment and integration of a 5,000-unit IoT cashless-payment platform — IoT modules reporting to a central dashboard, each device type custom-configured (chair-massage, vending, arcade, coin-laundry) and wired to a QRIS payment gateway.",
     approach: [
-      "Stakeholder & user mapping inside the first hours — no time for misaligned scope.",
-      "Hypothesis-driven prioritisation: one north-star metric, one MVP slice, one sequence.",
-      "Visual storytelling tuned to the judging panel (commercial + product + design).",
-      "Live Q&A prep — anticipated 80% of likely judge questions ahead of pitch.",
+      "Coordinated tech teams across a different configuration per client and device type.",
+      "Integrated IoT modules with a central monitoring dashboard.",
+      "Wired each device class to the QRIS payment gateway.",
     ],
     impact: [
-      "2nd place — Hack The Product × JULO: gamified loyalty dashboard projected +68% online activity, +22% social sharing.",
-      "2nd place — Hack The Product × Mekari: 2 flagship Mekari Flex products with projected ~IDR 5T/year revenue.",
-      "3rd place — Hack The Product × RedDoorz: 3 B2B app features projected +30% owner retention, -20% violations in 3 months.",
+      "5,000 units deployed nationwide on a recurring revenue model.",
     ],
-    tools: ["Product Strategy", "PRD", "Pitching", "Data-driven Decision Making", "Wireframing"],
+    tools: ["IoT Hardware Modules", "Monitoring Dashboard", "QRIS Payment Gateway", "Integration Management"],
+  },
+  {
+    id: "lrt-emagic",
+    featured: true,
+    tag: "IoT · Connectivity",
+    title: "LRT Jakarta eMagic — Managed IoT Connectivity",
+    company: "PT LRT Jakarta",
+    period: "Indosat · 2025—Present",
+    headline: "Managed cellular IoT connectivity for light-rail vehicles — built from scratch and retained on recompete.",
+    problem: "Light-rail vehicles need reliable, centrally managed IoT connectivity with monitoring — and a partner who can stand it up and keep it running.",
+    role: "End-to-end owner — technical proposal and business case; solution co-designed with the M2M product team.",
+    solution: "A managed-service IoT connectivity solution over cellular M2M (Jasper), with centralized monitoring across the LRV fleet.",
+    approach: [
+      "Mapped connectivity and monitoring requirements across the LRV fleet.",
+      "Co-designed the managed M2M solution with the product team.",
+      "Authored the technical proposal and business case end-to-end.",
+    ],
+    impact: [
+      "Won the initial contract, then retained it on the re-tender renewal.",
+      "A solution built from scratch and proven durable on recompete.",
+    ],
+    tools: ["Cellular M2M / Jasper", "Managed Connectivity", "IoT Monitoring", "Technical Proposal"],
+  },
+  {
+    id: "sucofindo-mdm",
+    featured: true,
+    tag: "MDM · Enterprise Mobility",
+    title: "Sucofindo — Integrated Mobile + Device + MDM",
+    company: "PT Sucofindo",
+    period: "Indosat · 2025—Present",
+    headline: "One managed program unifying mobile, devices, and cross-OS management for a large workforce.",
+    problem: "Consolidate mobile, devices, and device management for a large workforce under a single managed program.",
+    role: "Solution architect and proposal owner.",
+    solution: "An integrated 24-month solution — shared-quota corporate mobile (pooled, single-invoice data), iPhone and laptop lease-to-own with managed services, and a cross-OS MDM managing both the iPhone and laptop fleets (one user, multiple devices).",
+    approach: [
+      "Designed pooled 'Flex Mobile' shared-quota connectivity.",
+      "Structured iPhone and laptop lease-to-own with managed services.",
+      "Architected a cross-platform MDM for multi-OS, one-user-multi-device.",
+    ],
+    impact: [
+      "Full integrated solution architected and proposed for a large workforce.",
+    ],
+    tools: ["Pooled Mobile Data", "Device Lifecycle / Leasing", "Cross-platform MDM", "Managed Services"],
+  },
+  {
+    id: "pegadaian-smartcabinet",
+    featured: true,
+    tag: "RFID · Asset Security",
+    title: "SmartCabinet — RFID Gold-Asset Locker",
+    company: "Pegadaian",
+    period: "Iotera · 2023—2025",
+    headline: "Self-reconciling RFID lockers with real-time stock-take for high-value gold assets.",
+    problem: "Secure and continuously reconcile high-value gold assets at branch level with minimal manual effort.",
+    role: "End-to-end owner — tech docs → delivery → sign-off.",
+    solution: "An RFID secure gold-asset locker integrated with Pegadaian's internal app — per-item RFID tagging, an RFID-scanning locker, and a top-mounted screen showing real-time stock-take (opname) per locker.",
+    approach: [
+      "Designed per-item RFID tagging and locker scanning.",
+      "Integrated the locker with Pegadaian's internal app.",
+      "Delivered with a real-time opname display.",
+    ],
+    impact: [
+      "Delivered at Pegadaian Pungkur (Bandung) — 6 cabinets live.",
+      "Designed for further expansion.",
+    ],
+    tools: ["RFID Tagging & Scanning", "Locker Hardware", "Internal-app Integration", "Real-time Inventory"],
   },
 ];
 
 const SKILLS = [
   {
-    group: "Presales & Enterprise Sales",
-    items: ["B2B Presales", "Solution Architecture", "Technical Proposals", "BOQ Design", "RFP Responses", "Value-based Selling", "Enterprise ICT", "Tech Clarification Sessions"],
+    group: "Presales & Solutions",
+    items: ["B2B Presales", "Solution Architecture", "Technical Proposals", "Solution Design (MLD)", "BoQ & Business Case", "Multi-vendor Assessment", "Value-based Selling", "Enterprise ICT"],
+  },
+  {
+    group: "Device & IoT Solutions",
+    items: ["IoT / M2M", "MDM / Device Management", "RFID & Payment (QRIS) Integration", "Device Bundling", "Data Center", "Managed Services"],
   },
   {
     group: "Product Management",
@@ -196,7 +265,7 @@ const SKILLS = [
   },
   {
     group: "Project & Delivery",
-    items: ["IoT Project Delivery", "Cross-functional Leadership", "Stakeholder Management", "RAID Management", "Vendor Coordination", "Governance & Reporting", "Portfolio Management"],
+    items: ["IoT Project Delivery", "Rollout & Integration Management", "Cross-functional Leadership", "Stakeholder Management", "RAID Management", "Vendor Coordination", "Governance & Reporting", "Portfolio Management"],
   },
   {
     group: "Network & Connectivity",
@@ -204,11 +273,11 @@ const SKILLS = [
   },
   {
     group: "AI & Engineering",
-    items: ["AI-assisted Workflows", "Prompt Engineering", "Computer Vision (YOLOv6)", "LLM Integration", "Deep Learning", "Network Security Fundamentals"],
+    items: ["AI-assisted Workflows", "Prompt Engineering", "Computer Vision (YOLOv5)", "LLM Integration", "Deep Learning", "Network Security Fundamentals"],
   },
   {
     group: "Tools & Analytics",
-    items: ["Jira", "ClickUp", "Figma", "Metabase", "Google Sheets", "Google Analytics"],
+    items: ["Jira", "ClickUp", "Figma", "Metabase", "Cisco CCW / ISE estimator", "Google Sheets", "Google Analytics"],
   },
 ];
 
@@ -236,20 +305,37 @@ const RECOGNITION = [
   },
 ];
 
+const CERTIFICATIONS = [
+  {
+    group: "Cisco",
+    items: [
+      "CCNA: Introduction to Networks",
+      "CCNA: Switching, Routing & Wireless Essentials (v7)",
+      "Black Belt — IoT Network & IoT Sales (Stage 1)",
+      "Black Belt — Wireless Pre-Sales (Stages 1–3)",
+      "Black Belt — SD-WAN Presales (Stage 1)",
+      "Black Belt — Fire Jumper XDR Pre-Sales (Stage 2)",
+      "Black Belt — Security Essentials (Stage 1)",
+      "Introduction to Splunk",
+    ],
+  },
+  {
+    group: "Product & Business Analysis",
+    items: [
+      "Certification of Competency (Double-A) — Apiary Academy, 2022",
+      "Introduction to Project Management with ClickUp — Coursera, 2022",
+      "Business Analysis & Process Management — Coursera, 2022",
+    ],
+  },
+];
+
 const EDUCATION = [
   {
     kind: "Degree",
     title: "B.Eng. Computer Engineering",
     org: "Universitas Indonesia",
-    period: "Cum Laude · GPA 3.66 / 4.00",
-    note: "Thesis: Real-time face-mask detection using YOLOv6 deep learning — applied computer vision to a public health use case.",
-  },
-  {
-    kind: "Certification",
-    title: "Product Management — Certification of Competency (Double A)",
-    org: "Apiary Academy",
-    period: "Nov 2022",
-    note: "Applied product fundamentals — discovery, PRD, prioritisation, delivery. Solved a real case with Wilov (18,000+ MAU health app).",
+    period: "Cum Laude · GPA 3.66 / 4.00 · 2018–2022",
+    note: "Thesis: Real-time face-mask detection using YOLOv5 — a 3-class, multi-object deep-learning model trained on a 4,900-image dataset for COVID-19 mask-compliance monitoring.",
   },
 ];
 
@@ -258,8 +344,9 @@ const NAV = [
   { id: "experience", label: "Experience" },
   { id: "work", label: "Work" },
   { id: "skills", label: "Skills" },
-  { id: "recognition", label: "Recognition" },
+  { id: "certifications", label: "Certifications" },
   { id: "education", label: "Education" },
+  { id: "recognition", label: "Recognition" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -271,5 +358,5 @@ const ACCENT_OPTIONS = [
 ];
 
 Object.assign(window, {
-  PROFILE, METRICS, EXPERIENCE, CASES, SKILLS, RECOGNITION, EDUCATION, NAV, ACCENT_OPTIONS,
+  PROFILE, METRICS, EXPERIENCE, CASES, SKILLS, RECOGNITION, CERTIFICATIONS, EDUCATION, NAV, ACCENT_OPTIONS,
 });

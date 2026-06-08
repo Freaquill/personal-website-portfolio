@@ -358,6 +358,7 @@ button:focus-visible,
   padding-left: clamp(40px, 7vw, 140px);
   flex-wrap: wrap;
   row-gap: 0;
+  font-size: clamp(30px, 5vw, 78px);
 }
 .hero__num {
   font-family: var(--mono);
@@ -373,19 +374,12 @@ button:focus-visible,
   font-family: var(--sans);
   font-weight: 500;
 }
-.hero__name-amp {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.78em;
-  color: var(--ink-3);
-  padding: 0 0.04em;
-}
 .hero__name-italic {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(72px, 15.5vw, 216px);
+  line-height: 0.86;
+  letter-spacing: -0.04em;
   color: var(--accent);
 }
 
@@ -645,9 +639,7 @@ button:focus-visible,
 .about__photo-card img {
   width: 100%;
   display: block;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: center 18%;
+  height: auto;
   filter: saturate(0.88) contrast(1.08) brightness(1.04);
   transition: filter .3s;
 }
@@ -1541,4 +1533,31 @@ button:focus-visible,
   .recog-strip { grid-template-columns: 1fr; }
   .recog-cell { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; }
   .recog-cell:last-child { border-bottom: 0; }
+}
+
+/* ---------- Portfolio refresh additions ---------- */
+
+/* Make <picture> transparent to layout so existing img rules apply unchanged */
+.about__photo-card picture,
+.hero__card-avatar picture { display: contents; }
+
+/* Hero card avatar */
+.hero__card-head { align-items: center; }
+.hero__card-avatar { display: inline-flex; flex: 0 0 auto; }
+.hero__card-avatar img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--accent-line);
+}
+
+/* Secondary ("More projects") grid */
+.cases-more { margin-top: clamp(2rem, 1.4rem + 2vw, 3.25rem); }
+.cases-more__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin: 0 0 1rem;
 }
